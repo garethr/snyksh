@@ -22,15 +22,15 @@ docker pull garethr/snyksh
 ## Configuration
 
 In order to access the Snyk API you need to provide your API token. This is done using
-an environment variable called `SNYK_API_TOKEN`:
+an environment variable called `SNYK_TOKEN`:
 
 ```
-export SNYK_API_TOKEN=<your-token-goes-here>
+export SNYK_TOKEN=<your-token-goes-here>
 snyksh
 ```
 
 ```
-docker run --rm -it -e SNYK_API_TOKEN=<your-token> garethr/snyksh
+docker run --rm -it -e SNYK_TOKEN=<your-token> garethr/snyksh
 ```
 
 ## Usage

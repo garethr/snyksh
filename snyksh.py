@@ -10,10 +10,10 @@ pre-load a list of your organizations and projects so you have some data to expl
 import os
 import sys
 
-from IPython.terminal.embed import InteractiveShellEmbed
 import prettyprinter
-from prettyprinter import cpprint as pprint
 import snyk
+from IPython.terminal.embed import InteractiveShellEmbed
+from prettyprinter import cpprint as pprint
 from termcolor import colored, cprint
 
 prettyprinter.install_extras(include=["requests", "dataclasses"])
@@ -21,9 +21,9 @@ prettyprinter.install_extras(include=["requests", "dataclasses"])
 
 def run():
     try:
-        token = os.environ["SNYK_API_TOKEN"]
+        token = os.environ["SNYK_TOKEN"]
     except KeyError:
-        sys.exit("You must provide a SNYK_API_TOKEN to run Snyk Shell")
+        sys.exit("You must provide a SNYK_TOKEN to run Snyk Shell")
     client = snyk.SnykClient(token)
     organizations = client.organizations.all()
     projects = client.projects.all()

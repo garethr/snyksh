@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "An interactive shell interface for the Snyk API"
 authors = ["Gareth Rushgrove <gareth@morethanseven.net>"]
 license = "MIT"
+readme = "README.md"
+repository = "https://github.com/garethr/snyksh"
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -14,6 +16,10 @@ prettyprinter = "*"
 
 [tool.poetry.scripts]
 snyksh = 'snyksh:run'
+
+[tool.poetry.dev-dependencies]
+isort = "^4.3"
+black = {version = "^18.3-alpha.0",allows-prereleases = true}
 
 [build-system]
 requires = ["poetry>=0.12"]
