@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "snyksh"
-version = "0.1.0"
+version = "0.1.1"
 description = "An interactive shell interface for the Snyk API"
 authors = ["Gareth Rushgrove <gareth@morethanseven.net>"]
 license = "MIT"
